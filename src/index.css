@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-netflix-red hover:bg-[#ff0a16] text-white px-8 py-2 rounded font-bold transition duration-300;
+  }
+  .input-field {
+    @apply w-full bg-[#333] text-white rounded px-4 py-3 outline-none focus:bg-[#454545] transition duration-200;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  }
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  .glass {
+    @apply bg-black/40 backdrop-blur-md border border-white/10;
+  }
+  .banner-gradient {
+    background: linear-gradient(to top, #000 0%, transparent 50%, rgba(0,0,0,0.5) 100%);
+  }
+}
+
+/* Custom transitions for Netflix-style cards */
+.movie-card-transition {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
